@@ -14,6 +14,9 @@ html {
     &::-webkit-scroll-thumb{
         background-color : darkgrey ; 
     }
+    &::-webkit-scrollbar-track {
+    background: white;
+  }
 }
 
 body{
