@@ -8,19 +8,27 @@ import { loadDetail } from "../actions/detailAction";
 
 import { Link } from "react-router-dom";
 import { smallImage } from "../util";
+import { popup } from "../animations";
 
 const Game = ({ name, released, image, id }) => {
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
     document.body.style.overflow = "hidden";
     dispatch(loadDetail(id));
+
   };
   return (
-    <StyledGame onClick={loadDetailHandler}>
+    <StyledGame onClick={loadDetailHandler} layoutId={id} variants={popup} initial="hidden" animate="show" >
       <Link to={`game/${id}`}>
-        <h3>{name}</h3>
+        <motion.h3 layoutId={`title ${id}`}>{name}</motion.h3>
         <p>{released}</p>
-        <img src={image && smallImage(image, 640)} alt={name} />
+        {image && (
+          <motion.img
+            src={smallImage(image, 640)}
+            alt={name}
+            layoutId={`image ${id}`}
+          />
+        )}
       </Link>
     </StyledGame>
   );
