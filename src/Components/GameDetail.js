@@ -2,44 +2,63 @@ import { React } from "react";
 //Styling and Animation
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
-import { loadDetail } from "../actions/detailAction";
+
 //Redux
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom"
 
 const GameDetail = () => {
-  const { game, screen } = useSelector((state) => state.detail);
+ 
+  
+  const navigate = useNavigate() ; 
+  //exitHandler
+  const exitDetailHandler = (e) => {
+    
+    const element = e.target;
+    console.log(element);
+    if (element.classList.contains("shadow")) {
+      document.body.style.overflow = "auto";
+      navigate("/") ; 
+    }
+  };
+
+  //Data
+  const { game, screen, isLoading } = useSelector((state) => state.detail);
 
   return (
-    <CardShadow>
-      <Detail>
-        <Stats>
-          <div className="rating">
-            <h3>{game.name}</h3>
-            <p>Rating : {game.rating}</p>
-          </div>
-          <Info>
-            <h3>Platforms</h3>
-            <Platforms>
-              {game.platforms.map((data) => (
-                <h3 key={data.platform.id}>{data.platform.name}</h3>
+    <>
+      {!isLoading && (
+        <CardShadow className="shadow" onClick={exitDetailHandler}>
+          <Detail>
+            <Stats>
+              <div className="rating">
+                <h3>{game.name}</h3>
+                <p>Rating : {game.rating}</p>
+              </div>
+              <Info>
+                <h3>Platforms</h3>
+                <Platforms>
+                  {game.platforms.map((data) => (
+                    <h3 key={data.platform.id}>{data.platform.name}</h3>
+                  ))}
+                </Platforms>
+              </Info>
+            </Stats>
+            <Media>
+              <img src={game.background_image} alt="bg" />
+            </Media>
+            <Description>
+              <p>{game.description_raw}</p>
+            </Description>
+            <div className="gallery">
+              {screen.results.map((screen) => (
+                <img src={screen.image} key={screen.id} alt={screen.image} />
               ))}
-            </Platforms>
-          </Info>
-        </Stats>
-        <Media>
-          <img src={game.background_image} alt="image" />
-        </Media>
-        <Description>
-          <p>{game.description_raw}</p>
-        </Description>
-        <div className="gallery">
-          {screen.results.map((screen) => (
-            <img src={screen.image} key={screen.id} alt={screen.image} />
-          ))}
-        </div>
-      </Detail>
-    </CardShadow>
+            </div>
+          </Detail>
+        </CardShadow>
+      )}
+    </>
   );
 };
 
