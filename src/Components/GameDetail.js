@@ -5,20 +5,18 @@ import { motion } from "framer-motion";
 
 //Redux
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { smallImage } from "../util";
 
 const GameDetail = () => {
- 
-  
-  const navigate = useNavigate() ; 
+  const navigate = useNavigate();
   //exitHandler
   const exitDetailHandler = (e) => {
-    
     const element = e.target;
     console.log(element);
     if (element.classList.contains("shadow")) {
       document.body.style.overflow = "auto";
-      navigate("/") ; 
+      navigate("/");
     }
   };
 
@@ -45,14 +43,18 @@ const GameDetail = () => {
               </Info>
             </Stats>
             <Media>
-              <img src={game.background_image} alt="bg" />
+              <img src={smallImage(game.background_image, 1280)} alt="bg" />
             </Media>
             <Description>
               <p>{game.description_raw}</p>
             </Description>
             <div className="gallery">
               {screen.results.map((screen) => (
-                <img src={screen.image} key={screen.id} alt={screen.image} />
+                <img
+                  src={smallImage(screen.image, 1280)}
+                  key={screen.id}
+                  alt={screen.image}
+                />
               ))}
             </div>
           </Detail>
