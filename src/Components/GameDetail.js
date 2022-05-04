@@ -2,6 +2,7 @@ import { React } from "react";
 //Styling and Animation
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { popup } from "../animations";
 
 //Redux
 import { useSelector } from "react-redux";
@@ -66,12 +67,12 @@ const GameDetail = ({ intPathId }) => {
     <>
       {!isLoading && (
         <CardShadow className="shadow" onClick={exitDetailHandler}>
-          <Detail layoutId={intPathId}>
+          <Detail variants={popup} initial="hidden" animate="show">
             <Stats>
               <div className="rating">
-                <motion.h3 layoutId={`title ${intPathId}`}>
+                <h3>
                   {game.name}
-                </motion.h3>
+                </h3>
                 <p>Rating : {game.rating}</p>
                 {getStars()}
               </div>
@@ -89,10 +90,9 @@ const GameDetail = ({ intPathId }) => {
               </Info>
             </Stats>
             <Media>
-              <motion.img
+              <img
                 src={smallImage(game.background_image, 1280)}
                 alt="bg"
-                layoutId={`image ${intPathId}`}
               />
             </Media>
             <Description>

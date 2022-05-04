@@ -2,7 +2,7 @@ import React from "react";
 //Styling and Animation
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loadDetail } from "../actions/detailAction";
 //Redux
 
@@ -11,24 +11,24 @@ import { smallImage } from "../util";
 import { popup } from "../animations";
 
 const Game = ({ name, released, image, id }) => {
+  const { game } = useSelector((state) => state.detail);
+
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
     document.body.style.overflow = "hidden";
-    dispatch(loadDetail(id));
-
+    if (id !== game.id) dispatch(loadDetail(id));
   };
   return (
-    <StyledGame onClick={loadDetailHandler} layoutId={id} variants={popup} initial="hidden" animate="show" >
+    <StyledGame
+      onClick={loadDetailHandler}
+      variants={popup}
+      initial="hidden"
+      animate="show"
+    >
       <Link to={`game/${id}`}>
-        <motion.h3 layoutId={`title ${id}`}>{name}</motion.h3>
+        <h3>{name}</h3>
         <p>{released}</p>
-        {image && (
-          <motion.img
-            src={smallImage(image, 640)}
-            alt={name}
-            layoutId={`image ${id}`}
-          />
-        )}
+        {image && <img src={smallImage(image, 640)} alt={name} />}
       </Link>
     </StyledGame>
   );

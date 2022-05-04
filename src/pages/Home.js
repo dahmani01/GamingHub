@@ -7,7 +7,7 @@ import Game from "../Components/Game";
 import GameDetail from "../Components/GameDetail";
 //Styling and Animation
 import styled from "styled-components";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import { useLocation } from "react-router-dom";
 import { fadeIn } from "../animations";
@@ -16,7 +16,6 @@ const Home = () => {
   //get the current location
   const location = useLocation();
   const pathId = location.pathname.split("/")[2];
-  const intPathId = pathId && parseInt(pathId);
 
   //FETCH GAMES
   const dispatch = useDispatch();
@@ -27,9 +26,8 @@ const Home = () => {
   const { popular, newGames, upcoming ,searched} = useSelector((state) => state.game);
   return (
     <GameList variants={fadeIn} initial="hidden" animate="show">
-      <AnimatePresence>
-        {intPathId && <GameDetail intPathId={intPathId} />}
-      </AnimatePresence>
+     
+        {pathId && <GameDetail/>}
       {searched.length ? (
           <div className="searched">
             <h2>Searched Games</h2>
