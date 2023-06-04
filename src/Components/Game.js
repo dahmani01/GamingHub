@@ -1,7 +1,6 @@
 import React from "react";
 //Styling and Animation
 import styled from "styled-components";
-import { motion } from "framer-motion";
 
 const Game = ({ name, released, image }) => {
   return (
@@ -13,7 +12,7 @@ const Game = ({ name, released, image }) => {
   );
 };
 
-const StyledGame = styled(motion.div)`
+const StyledGame = styled("div")`
   min-height: 30vh;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
   text-align: center;
