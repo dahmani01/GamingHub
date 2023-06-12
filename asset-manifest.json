@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/gaminghub/static/js/main.ee63db8d.js",
-    "static/js/787.880fd806.chunk.js": "/gaminghub/static/js/787.880fd806.chunk.js",
-    "static/media/steam.svg": "/gaminghub/static/media/steam.d7b8819f879421dc2f25a3474964687d.svg",
-    "static/media/playstation.svg": "/gaminghub/static/media/playstation.18cc4b9ca49a92b00bb7958e88c5b9ad.svg",
-    "static/media/xbox.svg": "/gaminghub/static/media/xbox.3e7db73549794056f91af6a980fbc4a4.svg",
-    "static/media/gamepad.svg": "/gaminghub/static/media/gamepad.c9269ef588f73b9923db9e4c2be06cf0.svg",
-    "static/media/nintendo.svg": "/gaminghub/static/media/nintendo.f579be0450cff9bf18cd4b3371f79436.svg",
-    "index.html": "/gaminghub/index.html",
-    "static/media/apple.svg": "/gaminghub/static/media/apple.5757c37e1a2b3d89e03deb9212a997e8.svg",
-    "static/media/logo.svg": "/gaminghub/static/media/logo.9b6b8655566296b0edaa86ec3dbac3a0.svg",
-    "main.ee63db8d.js.map": "/gaminghub/static/js/main.ee63db8d.js.map",
-    "787.880fd806.chunk.js.map": "/gaminghub/static/js/787.880fd806.chunk.js.map"
+    "main.js": "/GamingHub/static/js/main.2ffc0d29.js",
+    "static/js/787.880fd806.chunk.js": "/GamingHub/static/js/787.880fd806.chunk.js",
+    "static/media/steam.svg": "/GamingHub/static/media/steam.d7b8819f879421dc2f25a3474964687d.svg",
+    "static/media/playstation.svg": "/GamingHub/static/media/playstation.18cc4b9ca49a92b00bb7958e88c5b9ad.svg",
+    "static/media/xbox.svg": "/GamingHub/static/media/xbox.3e7db73549794056f91af6a980fbc4a4.svg",
+    "static/media/gamepad.svg": "/GamingHub/static/media/gamepad.c9269ef588f73b9923db9e4c2be06cf0.svg",
+    "static/media/nintendo.svg": "/GamingHub/static/media/nintendo.f579be0450cff9bf18cd4b3371f79436.svg",
+    "index.html": "/GamingHub/index.html",
+    "static/media/apple.svg": "/GamingHub/static/media/apple.5757c37e1a2b3d89e03deb9212a997e8.svg",
+    "static/media/logo.svg": "/GamingHub/static/media/logo.9b6b8655566296b0edaa86ec3dbac3a0.svg",
+    "main.2ffc0d29.js.map": "/GamingHub/static/js/main.2ffc0d29.js.map",
+    "787.880fd806.chunk.js.map": "/GamingHub/static/js/787.880fd806.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.ee63db8d.js"
+    "static/js/main.2ffc0d29.js"
   ]
 }
