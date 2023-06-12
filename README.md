@@ -26,7 +26,7 @@ GamingHub is a website built using React and Redux, designed to showcase various
 3. Obtain an API key from the RAWG Game API website.
 4. Create a `.env` file in the root directory and add your API key:
    ```
-   REACT_APP_API_KEY=YOUR_API_KEY_HERE
+   REACT_APP_RAWG_API_KEY=YOUR_API_KEY_HERE
    ```
 5. Start the development server using `npm start`.
 6. Open the website in your preferred web browser.
