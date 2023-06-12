@@ -1,7 +1,6 @@
 //Base URL
 const base_url = "https://api.rawg.io/api/";
-const apiKey = "12770181351440e3807089afd926293b"; //for simplicity and deployment on gh pages
-// process.env.REACT_APP_RAWG_API_KEY || ;
+const apiKey = process.env.REACT_APP_RAWG_API_KEY;
 
 //Getting the date
 const getCurrentMonth = () => {
