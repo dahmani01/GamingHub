@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 //Animation
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import logo from "../img/logo.svg";
 //Redux and Routes
 import { fetchSearch } from "../actions/gamesAction";
