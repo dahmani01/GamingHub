@@ -1,14 +1,22 @@
 import React from "react";
 //Styling and Animation
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import { loadDetail } from "../actions/detailAction";
+//Redux
 
+import { Link } from "react-router-dom";
+import { smallImage } from "../util";
+import { popup } from "../animations";
+
+const Game = ({ name, released, image, id }) => {
+  const { game } = useSelector((state) => state.detail);
 
   const dispatch = useDispatch();
   const loadDetailHandler = () => {
     document.body.style.overflow = "hidden";
     if (id !== game.id) dispatch(loadDetail(id));
   };
-
   return (
     <StyledGame
       onClick={loadDetailHandler}
@@ -23,7 +31,7 @@ import styled from "styled-components";
       </Link>
     </StyledGame>
   );
-
+};
 
 const StyledGame = styled("div")`
   min-height: 30vh;
@@ -34,7 +42,7 @@ const StyledGame = styled("div")`
   overflow: hidden;
   img {
     width: 100%;
-    height: 45vh;
+    height: 40vh;
     object-fit: cover;
   }
 `;
