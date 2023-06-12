@@ -2,7 +2,7 @@
 
 GamingHub is a website built using React and Redux, designed to showcase various games sourced from the RAWG Game API. It provides users with an immersive gaming experience, allowing them to explore and discover new games.
 
-[Live Demo Here](https://dahmani01.github.io/GamingHub/)
+[Live Demo Here](https://gaminghubapp.netlify.app/)
 
 ## Features
 
