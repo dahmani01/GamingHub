@@ -69,9 +69,7 @@ const GameDetail = ({ intPathId }) => {
           <Detail variants={popup} initial="hidden" animate="show">
             <Stats>
               <div className="rating">
-                <h3>
-                  {game.name}
-                </h3>
+                <h3>{game.name}</h3>
                 <p>Rating : {game.rating}</p>
                 {getStars()}
               </div>
@@ -89,10 +87,7 @@ const GameDetail = ({ intPathId }) => {
               </Info>
             </Stats>
             <Media>
-              <img
-                src={smallImage(game.background_image, 1280)}
-                alt="bg"
-              />
+              <img src={smallImage(game.background_image, 1280)} alt="bg" />
             </Media>
             <Description>
               <p>{game.description_raw}</p>
@@ -113,7 +108,7 @@ const GameDetail = ({ intPathId }) => {
   );
 };
 
-const CardShadow = styled(motion.div)`
+const CardShadow = styled("div")`
   min-height: 100vh;
   width: 100%;
   overflow-y: scroll;
@@ -133,7 +128,7 @@ const CardShadow = styled(motion.div)`
   }
 `;
 
-const Detail = styled(motion.div)`
+const Detail = styled("div")`
   width: 80%;
   border-radius: 1rem;
   padding: 2rem 5rem;
@@ -147,7 +142,7 @@ const Detail = styled(motion.div)`
   }
 `;
 
-const Stats = styled(motion.div)`
+const Stats = styled("div")`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -157,10 +152,10 @@ const Stats = styled(motion.div)`
     display: inline;
   }
 `;
-const Info = styled(motion.div)`
+const Info = styled("div")`
   text-align: center;
 `;
-const Platforms = styled(motion.div)`
+const Platforms = styled("div")`
   display: flex;
   justify-content: space-evenly;
   img {
@@ -168,13 +163,13 @@ const Platforms = styled(motion.div)`
   }
 `;
 
-const Media = styled(motion.div)`
+const Media = styled("div")`
   margin-top: 5rem;
   img {
     width: 100%;
   }
 `;
-const Description = styled(motion.div)`
+const Description = styled("div")`
   margin: 5rem 0rem;
 `;
 export default GameDetail;

@@ -38,7 +38,7 @@ const Nav = () => {
   );
 };
 
-const StyledNav = styled(motion.nav)`
+const StyledNav = styled("nav")`
   padding: 3rem 5rem;
   text-align: center;
   input {
@@ -59,7 +59,7 @@ const StyledNav = styled(motion.nav)`
   }
 `;
 
-const Logo = styled(motion.div)`
+const Logo = styled("div")`
   display: flex;
   justify-content: center;
   padding: 1rem;
