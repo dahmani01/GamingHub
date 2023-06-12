@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/GamingHub/static/js/main.2ffc0d29.js",
+    "main.js": "/GamingHub/static/js/main.fa65cd28.js",
     "static/js/787.880fd806.chunk.js": "/GamingHub/static/js/787.880fd806.chunk.js",
     "static/media/steam.svg": "/GamingHub/static/media/steam.d7b8819f879421dc2f25a3474964687d.svg",
     "static/media/playstation.svg": "/GamingHub/static/media/playstation.18cc4b9ca49a92b00bb7958e88c5b9ad.svg",
@@ -10,10 +10,10 @@
     "index.html": "/GamingHub/index.html",
     "static/media/apple.svg": "/GamingHub/static/media/apple.5757c37e1a2b3d89e03deb9212a997e8.svg",
     "static/media/logo.svg": "/GamingHub/static/media/logo.9b6b8655566296b0edaa86ec3dbac3a0.svg",
-    "main.2ffc0d29.js.map": "/GamingHub/static/js/main.2ffc0d29.js.map",
+    "main.fa65cd28.js.map": "/GamingHub/static/js/main.fa65cd28.js.map",
     "787.880fd806.chunk.js.map": "/GamingHub/static/js/787.880fd806.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.2ffc0d29.js"
+    "static/js/main.fa65cd28.js"
   ]
 }
